@@ -95,6 +95,6 @@ Designed for both desktop and mobile, it provides an immersive user experience, 
 
 ## CONTACT
 - GitHub: @sujal68 https://github.com/sujal68  
-- Email: your-email@example.com  
+- Email: sujalkidecha68@gmail.com
 
 **Made with ❤️ by Sujal Kidecha**
