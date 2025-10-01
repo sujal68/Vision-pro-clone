@@ -1,0 +1,732 @@
+/* ============================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
+/* Extra Large Devices (1400px and up) */
+@media (max-width: 1400px) {
+    .container-apple {
+        max-width: 95%;
+        padding: 0 20px;
+    }
+    
+    .banner-video video {
+        width: 80%;
+    }
+    
+    .digital-text h2,
+    .digital-text h3 {
+        font-size: 42px !important;
+    }
+    
+    .digital-text2 h2 {
+        font-size: 60px !important;
+        width: 80%;
+    }
+}
+
+/* Large Devices (1200px and below) */
+@media (max-width: 1200px) {
+    .product-header ul li a {
+        font-size: 11px !important;
+    }
+    
+    .banner-content h1 {
+        font-size: 48px;
+    }
+    
+    .banner-video video {
+        width: 85%;
+        height: 80vh;
+    }
+    
+    .digital-text h2,
+    .digital-text h3 {
+        font-size: 36px !important;
+    }
+    
+    .digital-text2 h2 {
+        font-size: 50px !important;
+        width: 90%;
+    }
+    
+    .Apple-disign .disign-text h2 {
+        font-size: 65px;
+    }
+    
+    .Apple-disign .disign-text h5 {
+        width: 70%;
+        font-size: 22px;
+    }
+    
+    .dimension {
+        padding: 100px 50px;
+    }
+    
+    .text1 h4 {
+        font-size: 35px;
+        width: 90%;
+    }
+    
+    .text2 p {
+        font-size: 20px;
+    }
+    
+    .footer-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Medium Devices (992px and below) - Tablets */
+@media (max-width: 992px) {
+    /* Navigation */
+    .product-header ul {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .product-header ul li a {
+        font-size: 10px !important;
+    }
+    
+    .product-header .sub-menu {
+        display: none !important;
+    }
+    
+    .product-header-2 .apple-vision-text a {
+        font-size: 18px !important;
+    }
+    
+    .vision-texts a {
+        font-size: 11px !important;
+        margin: 5px 0px 5px 15px !important;
+    }
+    
+    /* Banner */
+    .banner-video video {
+        width: 95%;
+        height: 70vh;
+    }
+    
+    .banner-content h1 {
+        font-size: 40px;
+    }
+    
+    .banner-content h1 i {
+        font-size: 38px !important;
+    }
+    
+    .banner-content a {
+        font-size: 20px !important;
+    }
+    
+    .banner-video .video-toggle-btn {
+        right: -180px;
+        font-size: 18px;
+    }
+    
+    /* Digital Section */
+    .digital-text h2,
+    .digital-text h3 {
+        font-size: 32px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .digital-text p {
+        font-size: 18px !important;
+    }
+    
+    .digital-text2 h2 {
+        font-size: 42px !important;
+        width: 95%;
+    }
+    
+    .digital-text2 p {
+        font-size: 18px !important;
+    }
+    
+    /* Vision GIF */
+    .vision-gif h2 {
+        font-size: 40px;
+    }
+    
+    .vision-button a {
+        padding: 8px 25px;
+        font-size: 18px !important;
+    }
+    
+    .sequence-canvas {
+        width: 90%;
+    }
+    
+    /* Dimension Section */
+    .dimension {
+        padding: 80px 40px;
+    }
+    
+    .dimension .row {
+        flex-direction: column;
+    }
+    
+    .dimension .col-6 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .text1 h4 {
+        font-size: 32px;
+        width: 100%;
+    }
+    
+    .text2 p {
+        font-size: 18px;
+    }
+    
+    /* Apple Design */
+    .Apple-disign {
+        padding-top: 100px;
+    }
+    
+    .Apple-disign .disign-text h2 {
+        font-size: 55px;
+    }
+    
+    .Apple-disign .disign-text h5 {
+        width: 85%;
+        font-size: 20px;
+    }
+    
+    /* Images */
+    .imegas-apple {
+        padding: 30px;
+    }
+    
+    .imegas-apple img {
+        width: 100%;
+    }
+    
+    /* Footer */
+    .footer-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Devices (768px and below) - Mobile Landscape */
+@media (max-width: 768px) {
+    /* Navigation */
+    .product-header ul {
+        justify-content: center;
+        padding: 10px 0;
+    }
+    
+    .product-header ul li {
+        padding: 5px 8px !important;
+    }
+    
+    .product-header ul li a {
+        font-size: 9px !important;
+    }
+    
+    .product-header-2 ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .vision-texts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .vision-texts a {
+        margin: 5px 10px !important;
+    }
+    
+    .overview-a::after {
+        display: none;
+    }
+    
+    /* Banner */
+    .banner-video video {
+        width: 100%;
+        height: 60vh;
+    }
+    
+    .banner-content {
+        top: 80% !important;
+    }
+    
+    .banner-content h1 {
+        font-size: 36px;
+    }
+    
+    .banner-content h1 i {
+        font-size: 32px !important;
+    }
+    
+    .banner-content a {
+        font-size: 16px !important;
+        display: block !important;
+        margin: 10px 0;
+    }
+    
+    .banner-video .video-toggle-btn {
+        right: 20px;
+        top: 20px;
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    
+    /* Digital Section */
+    .digital-video-wrapper {
+        height: 150vh;
+    }
+    
+    .digital-text {
+        width: 95%;
+        gap: 1rem;
+    }
+    
+    .digital-text h2,
+    .digital-text h3 {
+        font-size: 28px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .digital-text p {
+        font-size: 16px !important;
+    }
+    
+    .digital-text2 h2 {
+        font-size: 36px !important;
+        width: 100%;
+    }
+    
+    .digital-text2 p {
+        font-size: 16px !important;
+    }
+    
+    .digital-content .video-toggle-btn {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+        top: 15px;
+    }
+    
+    .digital-content .video-toggle-btn i {
+        font-size: 20px;
+    }
+    
+    /* Vision GIF */
+    .vision-gif {
+        padding: 60px 0;
+    }
+    
+    .vision-gif h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .vision-gif video {
+        height: 300px;
+    }
+    
+    .vision-button a {
+        padding: 6px 20px;
+        font-size: 16px !important;
+    }
+    
+    .scroll-sequence-container {
+        height: 300vh;
+    }
+    
+    .sequence-canvas {
+        width: 95%;
+    }
+    
+    /* Dimension Section */
+    .dimension {
+        padding: 60px 30px;
+    }
+    
+    .text1 h4 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .text2 p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .dimension-btn {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+    
+    /* Apple Design */
+    .Apple-disign {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    
+    .Apple-disign .disign-text p {
+        font-size: 22px;
+    }
+    
+    .Apple-disign .disign-text h2 {
+        font-size: 45px;
+    }
+    
+    .Apple-disign .disign-text h5 {
+        width: 95%;
+        font-size: 18px;
+        margin-bottom: 60px;
+    }
+    
+    .container-apple2 {
+        min-height: 200vh;
+    }
+    
+    /* Images */
+    .imegas-apple {
+        padding: 20px;
+    }
+    
+    .imegas-apple .row {
+        flex-direction: column;
+    }
+    
+    .imegas-apple .row .col-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .imegas-apple video {
+        margin: 20px auto;
+    }
+    
+    /* Footer */
+    .apple-footer {
+        padding: 30px 15px;
+    }
+    
+    .footer-cols {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Extra Small Devices (576px and below) - Mobile Portrait */
+@media (max-width: 576px) {
+    /* Base Typography */
+    p {
+        font-size: 15px;
+    }
+    
+    /* Navigation */
+    .product-header {
+        padding: 0 10px;
+    }
+    
+    .product-header ul li a {
+        font-size: 8px !important;
+    }
+    
+    .product-header-2 .apple-vision-text a {
+        font-size: 16px !important;
+    }
+    
+    .vision-texts a {
+        font-size: 10px !important;
+        padding: 3px 8px;
+        margin: 3px 5px !important;
+    }
+    
+    /* Banner */
+    .banner-video video {
+        width: 100%;
+        height: 50vh;
+    }
+    
+    .banner-content {
+        top: 75% !important;
+        width: 90%;
+    }
+    
+    .banner-content h1 {
+        font-size: 30px;
+    }
+    
+    .banner-content h1 i {
+        font-size: 28px !important;
+    }
+    
+    .banner-content a {
+        font-size: 14px !important;
+        margin: 8px 0;
+    }
+    
+    .banner-video .video-toggle-btn {
+        right: 10px;
+        top: 10px;
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    
+    /* Digital Section */
+    .digital-video-wrapper {
+        height: 120vh;
+    }
+    
+    .digital-text {
+        width: 90%;
+        padding: 0 15px;
+    }
+    
+    .digital-text h2,
+    .digital-text h3 {
+        font-size: 24px !important;
+        line-height: 1.3;
+        margin-bottom: 12px !important;
+    }
+    
+    .digital-text p {
+        font-size: 14px !important;
+    }
+    
+    .digital-text2 h2 {
+        font-size: 30px !important;
+    }
+    
+    .digital-text2 p {
+        font-size: 14px !important;
+    }
+    
+    .digital-content .video-toggle-btn {
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        top: 10px;
+    }
+    
+    .digital-content .video-toggle-btn i {
+        font-size: 18px;
+    }
+    
+    .progress-ring {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .progress-ring__circle {
+        stroke-width: 2;
+    }
+    
+    /* Vision GIF */
+    .vision-gif {
+        padding: 40px 0;
+    }
+    
+    .vision-gif h2 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    
+    .vision-gif video {
+        height: 250px;
+    }
+    
+    .vision-button {
+        margin-top: 30px !important;
+    }
+    
+    .vision-button a {
+        padding: 5px 15px;
+        font-size: 14px !important;
+        border-width: 2px;
+    }
+    
+    .scroll-sequence-container {
+        height: 250vh;
+    }
+    
+    .sequence-canvas {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .sequence-image {
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Dimension Section */
+    .dimension {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .text1 h4 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .text2 p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .dimension-btn {
+        font-size: 14px;
+        padding: 6px 15px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    
+    /* Apple Design */
+    .Apple-disign {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    
+    .Apple-disign .disign-text p {
+        font-size: 18px;
+    }
+    
+    .Apple-disign .disign-text h2 {
+        font-size: 36px;
+    }
+    
+    .Apple-disign .disign-text h5 {
+        width: 100%;
+        font-size: 16px;
+        margin: 20px auto;
+        margin-bottom: 40px;
+    }
+    
+    .container-apple2 {
+        min-height: 180vh;
+    }
+    
+    /* Images */
+    .imegas-apple {
+        padding: 15px;
+    }
+    
+    .imegas-apple img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .imegas-apple video {
+        margin: 15px auto;
+        width: 100%;
+    }
+    
+    /* Footer */
+    .apple-footer {
+        padding: 20px 10px;
+        font-size: 12px;
+    }
+    
+    .footer-cols h4 {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    
+    .footer-cols ul li {
+        margin-bottom: 5px;
+    }
+    
+    .footer-cols ul li a {
+        font-size: 12px;
+    }
+    
+    .footer-bottom {
+        font-size: 11px;
+    }
+    
+    .footer-links {
+        font-size: 11px;
+    }
+}
+
+/* Very Small Devices (400px and below) */
+@media (max-width: 400px) {
+    .product-header ul li a {
+        font-size: 7px !important;
+    }
+    
+    .banner-content h1 {
+        font-size: 26px;
+    }
+    
+    .banner-content h1 i {
+        font-size: 24px !important;
+    }
+    
+    .digital-text h2,
+    .digital-text h3 {
+        font-size: 20px !important;
+    }
+    
+    .digital-text2 h2 {
+        font-size: 26px !important;
+    }
+    
+    .vision-gif h2 {
+        font-size: 22px;
+    }
+    
+    .Apple-disign .disign-text h2 {
+        font-size: 30px;
+    }
+    
+    .text1 h4 {
+        font-size: 20px;
+    }
+}
+
+/* Landscape Orientation Fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+    .banner-video video {
+        height: 90vh;
+    }
+    
+    .banner-content {
+        top: 70% !important;
+    }
+    
+    .digital-video-wrapper {
+        height: 200vh;
+    }
+    
+    .vision-gif video {
+        height: 200px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .product-header,
+    .product-header-2,
+    .video-toggle-btn,
+    .apple-footer {
+        display: none;
+    }
+    
+    .banner-video video,
+    .digital-video video {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}

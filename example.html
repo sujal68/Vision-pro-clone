@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone | Music Streaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .sidebar {
+            scrollbar-width: none;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(32, 32, 32, 1) 100%);
+        }
+
+        .play-button {
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+
+        .play-button:hover {
+            transform: scale(1.05);
+        }
+
+        .card:hover .play-button {
+            opacity: 1;
+            bottom: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white font-sans">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <div class="sidebar w-64 bg-black p-6 overflow-y-auto">
+            <div class="mb-8">
+                <div class="text-2xl font-bold mb-8 flex items-center">
+                    <i data-feather="music" class="mr-2"></i>
+                    Spotify
+                </div>
+                <nav>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-300 hover:text-white cursor-pointer">
+                            <i data-feather="home" class="mr-4"></i>
+                            <span>Home</span>
+                        </li>
+                        <li class="flex items-center text-gray-300 hover:text-white cursor-pointer">
+                            <i data-feather="search" class="mr-4"></i>
+                            <span>Search</span>
+                        </li>
+                        <li class="flex items-center text-gray-300 hover:text-white cursor-pointer">
+                            <i data-feather="book" class="mr-4"></i>
+                            <span>Your Library</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="mt-8">
+                <div class="text-gray-400 uppercase text-xs font-semibold mb-4">Playlists</div>
+                <ul class="space-y-3">
+                    <li class="text-gray-300 hover:text-white cursor-pointer">Liked Songs</li>
+                    <li class="text-gray-300 hover:text-white cursor-pointer">Recently Played</li>
+                    <li class="text-gray-300 hover:text-white cursor-pointer">Discover Weekly</li>
+                    <li class="text-gray-300 hover:text-white cursor-pointer">Daily Mix 1</li>
+                    <li class="text-gray-300 hover:text-white cursor-pointer">Chill Vibes</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-y-auto gradient-bg">
+            <header class="sticky top-0 z-10 bg-gradient-to-b from-black to-transparent p-6">
+                <div class="flex justify-between items-center">
+                    <div class="flex space-x-4">
+                        <button class="bg-black bg-opacity-40 rounded-full p-2">
+                            <i data-feather="chevron-left"></i>
+                        </button>
+                        <button class="bg-black bg-opacity-40 rounded-full p-2">
+                            <i data-feather="chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button
+                            class="bg-white text-black px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform">
+                            Upgrade
+                        </button>
+                        <div class="flex items-center bg-black bg-opacity-70 rounded-full px-3 py-1 cursor-pointer">
+                            <div class="w-8 h-8 rounded-full bg-purple-500 mr-2"></div>
+                            <span>Profile</span>
+                            <i data-feather="chevron-down" class="ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="p-8">
+                <section class="mb-10" data-aos="fade-up">
+                    <h1 class="text-3xl font-bold mb-6">Good afternoon</h1>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                        <!-- Playlist Cards -->
+                        <div
+                            class="bg-gray-800 bg-opacity-40 rounded-lg p-4 flex items-center hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="w-16 h-16 bg-purple-500 rounded mr-4"></div>
+                            <span class="font-medium">Liked Songs</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 bg-opacity-40 rounded-lg p-4 flex items-center hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="w-16 h-16 bg-blue-500 rounded mr-4"></div>
+                            <span class="font-medium">Discover Weekly</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 bg-opacity-40 rounded-lg p-4 flex items-center hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="w-16 h-16 bg-green-500 rounded mr-4"></div>
+                            <span class="font-medium">Daily Mix 1</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 bg-opacity-40 rounded-lg p-4 flex items-center hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="w-16 h-16 bg-yellow-500 rounded mr-4"></div>
+                            <span class="font-medium">Chill Vibes</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 bg-opacity-40 rounded-lg p-4 flex items-center hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="w-16 h-16 bg-pink-500 rounded mr-4"></div>
+                            <span class="font-medium">Workout Mix</span>
+                        </div>
+                        <div
+                            class="bg-gray-800 bg-opacity-40 rounded-lg p-4 flex items-center hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="w-16 h-16 bg-red-500 rounded mr-4"></div>
+                            <span class="font-medium">Rock Classics</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-10" data-aos="fade-up">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold">Made For You</h2>
+                        <a href="#" class="text-sm text-gray-400 hover:underline">Show all</a>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                        <!-- Album Cards -->
+                        <div
+                            class="card group relative bg-gray-800 bg-opacity-40 p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="relative mb-4">
+                                <img src="http://static.photos/music/320x320/1" alt="Album cover"
+                                    class="w-full rounded shadow-lg">
+                                <button
+                                    class="play-button absolute bottom-0 right-4 bg-green-500 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i data-feather="play" class="text-black"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-bold mb-1">Today's Top Hits</h3>
+                            <p class="text-gray-400 text-sm">The most popular songs right now</p>
+                        </div>
+                        <div
+                            class="card group relative bg-gray-800 bg-opacity-40 p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="relative mb-4">
+                                <img src="http://static.photos/music/320x320/2" alt="Album cover"
+                                    class="w-full rounded shadow-lg">
+                                <button
+                                    class="play-button absolute bottom-0 right-4 bg-green-500 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i data-feather="play" class="text-black"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-bold mb-1">RapCaviar</h3>
+                            <p class="text-gray-400 text-sm">New music from Drake, Kendrick and more</p>
+                        </div>
+                        <div
+                            class="card group relative bg-gray-800 bg-opacity-40 p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="relative mb-4">
+                                <img src="http://static.photos/music/320x320/3" alt="Album cover"
+                                    class="w-full rounded shadow-lg">
+                                <button
+                                    class="play-button absolute bottom-0 right-4 bg-green-500 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i data-feather="play" class="text-black"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-bold mb-1">All Out 2010s</h3>
+                            <p class="text-gray-400 text-sm">The biggest songs of the 2010s</p>
+                        </div>
+                        <div
+                            class="card group relative bg-gray-800 bg-opacity-40 p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="relative mb-4">
+                                <img src="http://static.photos/music/320x320/4" alt="Album cover"
+                                    class="w-full rounded shadow-lg">
+                                <button
+                                    class="play-button absolute bottom-0 right-4 bg-green-500 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i data-feather="play" class="text-black"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-bold mb-1">Rock Classics</h3>
+                            <p class="text-gray-400 text-sm">Rock legends & epic songs</p>
+                        </div>
+                        <div
+                            class="card group relative bg-gray-800 bg-opacity-40 p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="relative mb-4">
+                                <img src="http://static.photos/music/320x320/5" alt="Album cover"
+                                    class="w-full rounded shadow-lg">
+                                <button
+                                    class="play-button absolute bottom-0 right-4 bg-green-500 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i data-feather="play" class="text-black"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-bold mb-1">Chill Hits</h3>
+                            <p class="text-gray-400 text-sm">Kick back to the best new and recent chill hits</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-aos="fade-up">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold">Recently played</h2>
+                        <a href="#" class="text-sm text-gray-400 hover:underline">Show all</a>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                        <!-- Recently Played Cards -->
+                        <div
+                            class="card group relative bg-gray-800 bg-opacity-40 p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="relative mb-4">
+                                <img src="http://static.photos/music/320x320/6" alt="Album cover"
+                                    class="w-full rounded shadow-lg">
+                                <button
+                                    class="play-button absolute bottom-0 right-4 bg-green-500 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i data-feather="play" class="text-black"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-bold mb-1">Peaceful Piano</h3>
+                            <p class="text-gray-400 text-sm">Relax and indulge with beautiful piano pieces</p>
+                        </div>
+                        <div
+                            class="card group relative bg-gray-800 bg-opacity-40 p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="relative mb-4">
+                                <img src="http://static.photos/music/320x320/7" alt="Album cover"
+                                    class="w-full rounded shadow-lg">
+                                <button
+                                    class="play-button absolute bottom-0 right-4 bg-green-500 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i data-feather="play" class="text-black"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-bold mb-1">Deep Focus</h3>
+                            <p class="text-gray-400 text-sm">Keep calm and focus with ambient and post-rock music</p>
+                        </div>
+                        <div
+                            class="card group relative bg-gray-800 bg-opacity-40 p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="relative mb-4">
+                                <img src="http://static.photos/music/320x320/8" alt="Album cover"
+                                    class="w-full rounded shadow-lg">
+                                <button
+                                    class="play-button absolute bottom-0 right-4 bg-green-500 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i data-feather="play" class="text-black"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-bold mb-1">Instrumental Study</h3>
+                            <p class="text-gray-400 text-sm">Focus with soft study music in the background</p>
+                        </div>
+                        <div
+                            class="card group relative bg-gray-800 bg-opacity-40 p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="relative mb-4">
+                                <img src="http://static.photos/music/320x320/9" alt="Album cover"
+                                    class="w-full rounded shadow-lg">
+                                <button
+                                    class="play-button absolute bottom-0 right-4 bg-green-500 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i data-feather="play" class="text-black"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-bold mb-1">Jazz Vibes</h3>
+                            <p class="text-gray-400 text-sm">The original chill instrumental beats</p>
+                        </div>
+                        <div
+                            class="card group relative bg-gray-800 bg-opacity-40 p-4 rounded-lg hover:bg-gray-700 transition-colors cursor-pointer">
+                            <div class="relative mb-4">
+                                <img src="http://static.photos/music/320x320/10" alt="Album cover"
+                                    class="w-full rounded shadow-lg">
+                                <button
+                                    class="play-button absolute bottom-0 right-4 bg-green-500 rounded-full p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <i data-feather="play" class="text-black"></i>
+                                </button>
+                            </div>
+                            <h3 class="font-bold mb-1">Acoustic Morning</h3>
+                            <p class="text-gray-400 text-sm">Wake up gently with these acoustic pieces</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Player Bar -->
+    <div
+        class="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-800 p-4 flex items-center justify-between">
+        <div class="flex items-center w-1/4">
+            <img src="http://static.photos/music/80x80/11" alt="Album cover" class="w-14 h-14 mr-3">
+            <div>
+                <div class="font-medium text-sm">Song Title</div>
+                <div class="text-gray-400 text-xs">Artist Name</div>
+            </div>
+            <button class="ml-4 text-gray-400 hover:text-white">
+                <i data-feather="heart"></i>
+            </button>
+        </div>
+
+        <div class="w-2/4">
+            <div class="flex justify-center items-center space-x-6 mb-2">
+                <button class="text-gray-400 hover:text-white">
+                    <i data-feather="shuffle"></i>
+                </button>
+                <button class="text-gray-400 hover:text-white">
+                    <i data-feather="skip-back"></i>
+                </button>
+                <button
+                    class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform">
+                    <i data-feather="play" class="text-black"></i>
+                </button>
+                <button class="text-gray-400 hover:text-white">
+                    <i data-feather="skip-forward"></i>
+                </button>
+                <button class="text-gray-400 hover:text-white">
+                    <i data-feather="repeat"></i>
+                </button>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">0:45</span>
+                <div class="flex-1 h-1 bg-gray-700 rounded-full">
+                    <div class="bg-gray-400 h-1 rounded-full w-1/3"></div>
+                </div>
+                <span class="text-xs text-gray-400">3:22</span>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-end w-1/4 space-x-3">
+            <button class="text-gray-400 hover:text-white">
+                <i data-feather="mic"></i>
+            </button>
+            <button class="text-gray-400 hover:text-white">
+                <i data-feather="list"></i>
+            </button>
+            <button class="text-gray-400 hover:text-white">
+                <i data-feather="monitor"></i>
+            </button>
+            <div class="flex items-center space-x-1">
+                <i data-feather="volume-2" class="text-gray-400"></i>
+                <div class="w-20 h-1 bg-gray-700 rounded-full">
+                    <div class="bg-gray-400 h-1 rounded-full w-3/4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>AOS.init();</script>
+    <script>feather.replace();</script>
+</body>
+
+</html>
