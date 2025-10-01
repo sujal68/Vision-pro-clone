@@ -56,13 +56,13 @@ Designed for both desktop and mobile, it provides an immersive user experience, 
 ## SCREENSHOTS / GIFS
 
 ### Banner Animation
-![Banner Animation](images/bannergif.GIF)
+![Banner Animation](images/bannergif.gif)
 
 ### Scroll Animation 1
-![Scroll Animation 1](images/scroller-visiongif.GIF)
+![Scroll Animation 1](images/scroller-visiongif.gif)
 
 ### Scroll Animation 2
-![Scroll Animation 2](images/scroller2gif.GIF)
+![Scroll Animation 2](images/scroller2gif.gif)
 
 ---
 
