@@ -71,8 +71,6 @@ Designed for both desktop and mobile, it provides an immersive user experience, 
 - **Flow**:  
   1. User lands on home page → sees cinematic banner GIF  
   2. Scroll triggers animations of product sections  
-  3. Interactive hover elements engage the user  
-  4. Fully responsive layout adapts to device  
 
 - **Diagram Placeholders:**  
   - ER Diagram / UI Flow / Class Diagram (Optional for documentation)  
